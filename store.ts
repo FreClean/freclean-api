@@ -1,5 +1,5 @@
 /**
- * DEMO DATA — NOT REAL CUSTOMER DATA
+ * DEMO DATA: NOT REAL CUSTOMER DATA
  *
  * This is an in-memory store used so the API is runnable and testable without
  * a database connection. Replace with a real persistence layer (e.g.
@@ -68,7 +68,7 @@ seed('assets', [
     status: 'in_development',
     paymentEnabled: false,
     verificationDate: null,
-    notes: 'Placeholder row — no Celo asset has been verified for payments yet.',
+    notes: 'Placeholder row: no Celo asset has been verified for payments yet.',
   },
 ]);
 

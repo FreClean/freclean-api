@@ -1,7 +1,7 @@
 {
   "name": "freclean-api",
   "version": "0.1.0",
-  "description": "FreClean backend API — auth, bookings, orders, products, payments (cash/card/Web3), and operational data for the FreClean ecosystem.",
+  "description": "FreClean backend API for auth, bookings, orders, products, payments (cash/card/Web3), and operational data for the FreClean ecosystem.",
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",

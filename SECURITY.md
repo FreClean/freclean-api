@@ -1,4 +1,4 @@
-# Security Policy — freclean-api
+# Security Policy for freclean-api
 
 ## Reporting a vulnerability
 
@@ -9,7 +9,7 @@ Email **freclean7@gmail.com** with details. Do not open a public issue for unpat
 - Passwords hashed with bcrypt (cost factor 12), never stored or logged in plaintext.
 - JWT-based authentication (`requireAuth`) on every route under `/api`.
 - Role-based access control (`requireRole`) per resource and per HTTP method.
-- Input validation on every write via Zod schemas — malformed bodies are rejected before touching the data layer.
+- Input validation on every write via Zod schemas; malformed bodies are rejected before touching the data layer.
 - Rate limiting on all routes (default: 300 requests / 15 minutes / IP).
 - Security headers via `helmet`.
 - An audit log entry is written for every successful mutating request (`src/middleware/auditLog.ts`).
@@ -18,7 +18,7 @@ Email **freclean7@gmail.com** with details. Do not open a public issue for unpat
 
 ## What is not yet implemented
 
-- Persistent storage (currently an in-memory demo store — see `src/data/store.ts`). Do not deploy this as-is to production.
+- Persistent storage (currently an in-memory demo store; see `src/data/store.ts`). Do not deploy this as-is to production.
 - Secret management via a vault/KMS (currently relies on environment variables only).
 - Dependency vulnerability scanning in CI (add a `npm audit` or Dependabot step before production use).
 - Multi-signature approval for treasury-related endpoints (see `freclean-docs` treasury policy).

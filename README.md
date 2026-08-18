@@ -1,12 +1,12 @@
 # FreClean API
 
-Backend API for the FreClean ecosystem — authentication, customers, bookings, orders, products, inventory, staff/teams, entrepreneurs, payments (cash/card/Web3), reviews, notifications, reports, analytics, and audit logs.
+Backend API for the FreClean ecosystem, covering authentication, customers, bookings, orders, products, inventory, staff/teams, entrepreneurs, payments (cash/card/Web3), reviews, notifications, reports, analytics, and audit logs.
 
 Part of the FreClean ecosystem (see `freclean-website`, `freclean-admin`, `freclean-dapp`, `freclean-payment`, `freclean-docs`).
 
 ## Status
 
-**In development.** Runs against an in-memory demo data store (`src/data/store.ts`) so the API is fully runnable and testable without a database. Swap in a real persistence layer (PostgreSQL, via `freclean-data`) before production use — the CRUD factory (`src/core/createCrudRouter.ts`) is written so that swap doesn't require touching route logic.
+**In development.** Runs against an in-memory demo data store (`src/data/store.ts`) so the API is fully runnable and testable without a database. Swap in a real persistence layer (PostgreSQL, via `freclean-data`) before production use. The CRUD factory (`src/core/createCrudRouter.ts`) is written so that swap does not require touching route logic.
 
 ## Tech stack
 
@@ -44,7 +44,7 @@ All business routes are mounted under `/api`. Auth routes are under `/auth`. Hea
 | `/api/staff` | Staff | |
 | `/api/teams` | Cleaning teams | |
 | `/api/entrepreneurs` | Entrepreneur program | |
-| `/api/payments` | Payments | Custom router — see below |
+| `/api/payments` | Payments | Custom router, see below |
 | `/api/assets` | Supported Celo assets registry | Finance-role access only |
 | `/api/reviews` | Reviews | |
 | `/api/notifications` | Notifications | |
@@ -70,7 +70,7 @@ Send `Authorization: Bearer <token>` on every `/api/*` request. Roles: `founder`
 
 ## Data integrity rule
 
-No invented business facts. Seed data in `src/data/store.ts` is explicitly marked `_demo: true` and documented as **DEMO DATA — NOT REAL CUSTOMER DATA**. The Supported Assets Registry (`/api/assets`) ships empty/placeholder until a real Celo asset is verified — see `freclean-payment` and `freclean-docs`.
+No invented business facts. Seed data in `src/data/store.ts` is explicitly marked `_demo: true` and documented as **DEMO DATA: NOT REAL CUSTOMER DATA**. The Supported Assets Registry (`/api/assets`) ships empty/placeholder until a real Celo asset is verified; see `freclean-payment` and `freclean-docs`.
 
 ## Roadmap for this repo
 

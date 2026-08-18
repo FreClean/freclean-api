@@ -10,7 +10,7 @@ import { z } from 'zod';
 /**
  * Payment status must move forward through a fixed sequence. This guards
  * against skipping straight to "confirmed" without passing through
- * verification — see docs/PAYMENT-ARCHITECTURE.md in freclean-docs.
+ * verification via docs/PAYMENT-ARCHITECTURE.md in freclean-docs.
  */
 const STATUS_ORDER = [
   'requested',

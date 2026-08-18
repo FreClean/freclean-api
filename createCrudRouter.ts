@@ -18,7 +18,7 @@ export interface CrudConfig {
  * Builds a standard REST router (list/get/create/update/delete) for one
  * FreClean resource, wired with auth, RBAC, and validation. Domain-specific
  * behavior (e.g. payment verification) is layered on top in that module's
- * own router — see src/modules/payments for an example.
+ * own router; see src/modules/payments for an example.
  */
 export function createCrudRouter(config: CrudConfig): Router {
   const { resource, permissions, createSchema, updateSchema } = config;

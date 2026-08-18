@@ -1,7 +1,7 @@
 /**
  * FreClean role-based access control.
  * Mirrors the roles defined for freclean-admin: Founder, Management, Finance,
- * Operations, Product Management, Cleaning Staff, Support — plus Entrepreneur
+ * Operations, Product Management, Cleaning Staff, Support, plus Entrepreneur
  * and Customer for external, non-admin accounts.
  */
 export type Role =
